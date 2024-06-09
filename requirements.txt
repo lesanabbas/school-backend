@@ -123,7 +123,6 @@ python-dotenv==1.0.0
 python-http-client==3.3.7
 python-json-logger==2.0.7
 python-magic==0.4.27
-python-magic-bin @ file:///C:/Users/Abbas/OneDrive/Documents/saleor-coneio/python_magic_bin-0.4.14-py2.py3-none-win_amd64.whl#sha256=90be6206ad31071a36065a2fc169c5afb5e0355cbe6030e87641c6c62edc2b69
 pytimeparse==1.1.8
 pytz==2023.3
 PyXB==1.2.5
