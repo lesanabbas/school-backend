@@ -3,6 +3,19 @@
 # Set the virtual environment directory name
 VENV_DIR="venv"
 
+# Install system dependencies
+echo "Installing system dependencies..."
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    sudo apt-get update
+    sudo apt-get install -y libxml2-dev libxslt1-dev
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    brew install libxml2 libxslt
+    brew link libxml2 --force
+    brew link libxslt --force
+fi
+
 # Create virtual environment
 echo "Creating virtual environment..."
 python3 -m venv $VENV_DIR
