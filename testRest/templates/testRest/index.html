@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .page {
+            display: grid;
+            min-height: 100vh;
+        }
+
+        .page__text {
+            margin: auto;
+        }
+
+        .text {
+            position: relative;
+            font-size: clamp(4rem, 7vw, 8rem);
+        }
+
+        .text::before {
+            animation-name: anim;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            color: red;
+            position: absolute;
+            top: 0;
+            left: -2px;
+            width: 0;
+            overflow: hidden;
+            content: attr(data-text);
+        }
+
+        @keyframes anim {
+
+            50%,
+            80% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <body class="page">
+        <h1 class="text page__text" data-text="Hello">Hello</h1>
+    </body>
+</body>
+<script>
+
+</script>
+
+</html>
