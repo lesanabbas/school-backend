@@ -85,12 +85,25 @@ WSGI_APPLICATION = 'schoolAdmin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "FaB1CF5fG4d46e1A-e4-af3aa226a5Fd",
+        "HOST": "viaduct.proxy.rlwy.net",
+        "PORT": "48523",
     }
 }
+
 
 
 # Password validation
